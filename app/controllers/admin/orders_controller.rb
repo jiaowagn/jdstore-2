@@ -24,7 +24,7 @@ class Admin::OrdersController < ApplicationController
   end
 
   def shipped
-    @order = Order.find(parsms[:id])
+    @order = Order.find(params[:id])
     @order.deliver!
     redirect_to :back
   end
